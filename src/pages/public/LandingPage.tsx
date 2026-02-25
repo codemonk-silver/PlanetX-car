@@ -11,9 +11,7 @@ import {
   TrendingUp, 
   Star,
   ChevronRight,
-  Play,
-  Menu,
-  X
+  Play
 } from 'lucide-react';
 import { categories } from '../../types';
 import { useCarStore } from '../../stores/carStore';
@@ -38,7 +36,6 @@ const brands = ['Mercedes', 'BMW', 'Audi', 'Tesla', 'Toyota', 'Porsche', 'Lexus'
 export const LandingPage: React.FC = () => {
   const { filteredCars, getCategoryCounts } = useCarStore();
   const [currentHero, setCurrentHero] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const categoryCounts = getCategoryCounts();
   
